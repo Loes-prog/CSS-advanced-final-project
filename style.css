@@ -1,31 +1,404 @@
-/* algemene stijl voor de pagina */
+/* import font-family Roboto */
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: burlywood;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto&display=swap');
+
+/* definitie van de standaard kleuren */
+:root {
+
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --purple-dark: hsl(256, 67%, 18%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 90%, 7%);
+  --grey: hsl(30, 90%, 7%);
+
 }
 
-/* einde algemene stijl voor de pagine */
+/* algemene settings en stijl voor de pagina */
 
+body {
+  margin: 0;
+  background-color: rgb(230, 227, 227);
+  font-size: 1.8rem;
+  line-height: 1.1;
+  font-family: "Roboto", serif;
+  color: var(--black);
+}
 
+main,
+header {
+  margin: 20px;
+}
 
+* {
+  box-sizing: border-box;
+}
 
-.attribution {
+/* navigatiebar en logo styling */
+
+.menu-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  background-color: var(--purple-dark);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu a {
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: var(--purple-100);
+}
+
+.menu a:active {
+  background-color: var(--yellow-500);
+}
+
+.logo {
+  width: auto;
+  height: 10vh;
+}
+
+/* header styling */
+
+header {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+header>p {
+  text-transform: capitalize;
+  color: var(--black);
+}
+
+/* de footer styling */
+
+.footer {
+  border-top: 1px solid lightgray;
+  bottom: 0;
+  width: 100%;
+  padding: 2px;
   font-size: 11px;
   text-align: center;
 }
 
-.attribution a {
+footer a {
   color: hsl(228, 45%, 44%);
 }
 
-/* footer styling */
+/* more-info-box */
 
-footer {
-  position: absolute;
-  bottom: 0;
+.more-info-box {
+  padding-top: 50px;
+}
+
+/* button styling */
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  margin-right: 35px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  padding: 12px 24px;
+  background-color: var(--purple-500);
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--white);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--purple-dark);
+  color: var(--yellow-500);
+}
+
+/* grid box */
+
+.grid-container {
+  display: grid;
   width: 100%;
-  background-color: whitesmoke;
+  gap: 25px;
+}
+
+.grid-item {
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* items in de grid box */
+
+.item-1 {
+  background-color: var(--purple-500);
+  text-align: center;
+  color: var(--white);
+}
+
+.item-1 p:last-child {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.item-1 img {
+  width: 50%;
+  height: auto;
+}
+
+.item-2 {
+  background-color: var(--white);
+}
+
+.item-2 img {
+  width: 100%;
+  height: auto;
+}
+
+.item-3 {
+  background-color: var(--yellow-500);
+}
+
+.item-3 img {
+  margin-bottom: -100px;
+  width: 100%;
+  height: auto;
+}
+
+.item-4 {
+  background-color: var(--purple-100);
+}
+
+.item-4 img {
+  width: 100%;
+}
+
+.item-4 p:last-child {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.item-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.item-5 p {
+  margin: 10px;
+}
+
+.item-5 img {
+  width: 65%;
+  height: auto;
+}
+
+.item-6 {
+  background-color: var(--yellow-100);
+}
+
+.item-6 img {
+  width: 80%;
+  height: auto;
+}
+
+.item-7 {
+  background-color: var(--yellow-500);
+}
+
+.item-7 img {
+  width: 80%;
+  height: auto;
+}
+
+.item-8 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--purple-500);
+  color: var(--white);
+}
+
+.item-8 img {
+  width: 80%;
+  height: auto;
+}
+
+/* utility classes */
+
+.bold {
+  font-weight: bold;
+}
+
+.fonts-1 {
+  font-size: 1rem;
+}
+
+.fonts-2 {
+  font-size: 2rem;
+}
+
+.fonts-25 {
+  font-size: 2.5rem;
+}
+
+.fonts-3 {
+  font-size: 3rem;
+}
+
+.ital {
+  font-style: italic;
+}
+
+.yellow {
+  color: var(--yellow-500);
+}
+
+.purple {
+  color: var(--purple-500)
+}
+
+.purpledark {
+  color: hsl(256, 67%, 18%);
+}
+
+/* media query vanaf 1000px */
+@media screen and (min-width: 1000px) {
+
+  .menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu li {
+    margin: 5px 20px;
+  }
+
+  .logo {
+    padding-left: 40px;
+  }
+
+  /* grid template container */
+
+  .grid-container {
+    grid-template-areas:
+      "een twee twee drie"
+      "een vier vijf drie"
+      "zes vier vijf drie"
+      "zes zeven acht acht"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto auto;
+  }
+
+  /* grid area toewijzing */
+
+  .item-1 {
+    grid-area: twee;
+  }
+
+  .item-2 {
+    grid-area: vier;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .item-3 {
+    grid-area: vijf;
+  }
+
+  .item-3 img {
+    margin-right: -100px;
+  }
+
+  .item-4 {
+    grid-area: drie;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .item-4 img {
+    margin-right: -120px;
+    width: auto;
+  }
+
+  .item-5 {
+    grid-area: zeven;
+  }
+
+  .item-6 {
+    grid-area: een;
+  }
+
+  .item-7 {
+    grid-area: zes;
+  }
+
+  .item-8 {
+    grid-area: acht;
+    display: inline-flex;
+    align-content: center;
+  }
+
+  .item-8 p {
+    width: 50%;
+    text-align: left;
+  }
+
+  .item-8 img {
+    width: 50%;
+    height: auto;
+  }
+
+  /* de more-info-box */
+
+  .more-info-box {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .button-box {
+    justify-content: flex-end;
+  }
+
 }
