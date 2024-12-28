@@ -1,3 +1,11 @@
+
+Voorkeur gaat uit naar feedback in het Nederlands.
+
+Het voorbeeld is gekozen van 'www.frontendmentor.io'. Ik heb zelf nog wat extra elementen toegevoegd om de pagina completer te maken.
+
+
+-----------------------------------------------------------------------------------------------
+
 # Frontend Mentor - Bento grid
 
 ![Design preview for the Bento grid coding challenge](./preview.jpg)
